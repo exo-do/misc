@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>websocket test</title>
+<body>
+
+	<p>Hello world</p>
+
+
+	<script src="http://{server_ip}:8080/socket.io/socket.io.js"></script>
+	<script>
+	  var socket = io("{server_ip}:8080");
+	  
+	  socket.on('users online', function(data){
+		console.log(data);
+	  });
+	</script>
+</body>
+</html>

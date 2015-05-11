@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>websocket test</title>
+<body>
+
+	<p>Hello world</p>
+
+
+	<script src="http://universojuegos.net:9090/socket.io/socket.io.js"></script>
+	<script>
+	  var socket = io("universojuegos.net:9090");
+	  
+	  socket.on('users online', function(data){
+		console.log(data);
+	  });
+	</script>
+</body>
+</html>

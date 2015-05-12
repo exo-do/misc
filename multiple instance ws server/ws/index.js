@@ -6,6 +6,9 @@ var server = new Socketio(PORT, {
   'transports': ['polling']
 });
 
+var redis = require('socket.io-redis');
+server.adapter(redis({ host: 'localhost', port: 6379 }));
+
 var redis = require("redis"),
     redisClient = redis.createClient();
 redisClient.on("error", function (err) {

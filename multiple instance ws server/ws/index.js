@@ -1,7 +1,8 @@
 'use strict';
 
 var Socketio = require('socket.io');
-var server = new Socketio(9090, {
+var PORT = parseInt(process.argv[2], 10) || 9090;
+var server = new Socketio(PORT, {
   'transports': ['polling']
 });
 
